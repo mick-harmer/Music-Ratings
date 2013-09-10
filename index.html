@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Album Ratings</title>
+</head>
+
+<body>
+
+<h1><a href="#">Album Ratings</a></h1>
+<nav>
+	<ul>
+		<li><a href="#">Submit</a></li>
+		<li><a href="#">Browse</a></li>
+		<li><a href="#">Search</a></li>
+	</ul>
+</nav>
+
+<div class="main">
+
+<div id="intro">
+	<p>Album Ratings is a tool that lets you submit album ratings.</p>
+	<p>You can also browse existing ratings, and search for specific albums.</p>
+</div>
+
+<form id="submit_album" action="submit.php" method="post">
+	Artist: <input type="text" name="artist" required><br>
+	Album: <input type="text" name="album" required><br>
+	Rating:
+	<select name="rating" required>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select><br>
+	<input type="submit" value="Submit Rating">
+</form>
+
+<form id="search_album" action="results.php" method="post">
+	<input type="text" name="artist" required>
+	<input type="submit" value="Search Artist">
+</form>
+
+<ul class="album_list">
+	<script id="album_template" type="text/x-handlebars-template">
+		{{#each this}}
+		<li>
+			{{artist}} - {{album}} [{{rating}}]
+		</li>
+		{{/each}}
+	</script>
+</ul>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+<script src="handlebars.js"></script>
+<script src="scripts.js"></script>
+
+
+</body>
+</html>
