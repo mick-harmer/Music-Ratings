@@ -51,22 +51,11 @@ var rate_album = {
 					self.config.submitForm.each(function() {
 						this.reset();
 					});
-					self.config.submitForm.append(data);
+					self.config.submitForm.append(results);
 				}
 			});
 			e.preventDefault();
 		});
-
-		/*$("#submit_album input[type='submit']").on('click', function(e) {
-			$.post(
-				"submit.php",
-				self.config.submitForm.serialize(),
-				function(data) {
-					self.config.submitForm.append(data);
-				}
-			);
-			e.preventDefault();
-		});*/
 
 		// do a POST request to search for an album
 		$("#search_album input[type='submit']").on('click', function(e) {
