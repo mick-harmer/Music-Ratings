@@ -7,7 +7,7 @@
 
 <body>
 
-<h1><a href="#">Album Ratings</a></h1>
+<h1><a href="#">Music Ratings</a></h1>
 <nav>
 	<ul>
 		<li><a href="#">Submit</a></li>
@@ -19,22 +19,22 @@
 <div class="main">
 
 <div id="intro">
-	<p>Album Ratings is a tool that lets you submit album ratings.</p>
-	<p>You can also browse existing ratings, and search for specific albums.</p>
+	<p>Music Ratings is a tool that lets you submit album ratings.</p>
+	<p>You can also browse existing ratings, and search for specific artists.</p>
 </div>
 
 <form id="submit_album" action="submit.php" method="post">
-	Artist: <input type="text" name="artist" required><br>
-	Album: <input type="text" name="album" required><br>
-	Rating:
-	<select name="rating" required>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-		<option value="5">5</option>
+	<label for="artist">Artist</label><input type="text" name="artist" id="artist" required><br>
+	<label for="album">Album</label><input type="text" name="album" id="album" required><br>
+	<label for="rating">Rating</label>
+	<select name="rating" id="rating" required>
+		<option value="1">*</option>
+		<option value="2">**</option>
+		<option value="3">***</option>
+		<option value="4">****</option>
+		<option value="5">*****</option>
 	</select><br>
-	<input type="submit" value="Submit Rating">
+	<label for="submit">blah</label><input type="submit" id="submit" value="Submit">
 </form>
 
 <form id="search_album" action="results.php" method="post">
