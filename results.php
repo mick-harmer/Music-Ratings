@@ -12,6 +12,7 @@ $pdo = new PDO($dsn);
 // search for a particular artist
 if (isSet($_POST["artist_search"]))
 {
+	echo "BLAH";
 	$stmt = $pdo->prepare('
 		SELECT artist, album, rating
 		FROM ratings
