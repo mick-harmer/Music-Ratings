@@ -20,7 +20,7 @@
 
 <div id="intro">
 	<p>Music Ratings is a tool that lets you submit album ratings.</p>
-	<p>You can also browse existing ratings, and search for specific artists.</p>
+	<p>You can browse existing ratings, and search for specific artists.</p>
 </div>
 
 <form id="submit_album" action="submit.php" method="post">
@@ -38,8 +38,8 @@
 </form>
 
 <form id="search_album" action="results.php" method="post">
-	<input type="text" name="artist" required>
-	<input type="submit" value="Search Artist">
+	<label for="artist_search">Artist</label><input type="text" name="artist_search" id="artist_search" required>
+	<input type="submit" value="Search" id="Search">
 </form>
 
 <ul class="album_list">

@@ -10,7 +10,7 @@ $dsn = "pgsql:"
 $pdo = new PDO($dsn);
 
 // search for a particular artist
-if (isSet($_POST["artist"]))
+if (isSet($_POST["artist_search"]))
 {
 	$stmt = $pdo->prepare('
 		SELECT artist, album, rating

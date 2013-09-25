@@ -16,7 +16,7 @@ var rate_album = {
 		// on h1 click, show intro text and hide siblings
 		$("h1 a").on('click', function(e) {
 			$(".main #intro").fadeIn(200).siblings().hide();
-			$("nav a").css("color", "#BEBEBE;")
+			$("nav a").css("color", "#BEBEBE");
 			e.preventDefault();
 		});
 

@@ -60,12 +60,21 @@ nav a:hover {
 	color: #BEBEBE;
 }
 
+p {
+	font-size: 20px;
+}
+
 /* Submit rating and search artist -- form styling */
-label {
+#submit_album label {
 	float: left;
 	text-align: right;
 	margin-right: 15px;
 	width: 180px;
+}
+
+#search_album label {
+	text-align: center;
+	padding-right: 20px;
 }
 
 input[type=text] {
@@ -79,7 +88,7 @@ input[type=text] {
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-#submit_album {
+form {
 	font-size: 20px;
 }
 
@@ -100,6 +109,10 @@ label[for=submit] {
 	visibility: hidden;
 }
 
+label[for=Search] {
+	visibility: hidden;
+}
+
 /* center the search and intro text */
 #search_album {
 	text-align: center;
@@ -115,10 +128,6 @@ label[for=submit] {
 	font-size: 20px;
 	letter-spacing: -1px;
 	text-align: left;
-}
-
-#intro {
-	display: none;
 }
 
 #submit_album {
