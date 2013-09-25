@@ -43,6 +43,8 @@ var rate_album = {
 
 		// do a POST request to submit an album
 		$("#submit_album input[type='submit']").on('click', function(e) {
+			var response = $("#submit_album #submit_response");
+			response.empty();
 			$.ajax({
 				url: 'submit.php',
 				type: 'POST',
@@ -51,10 +53,11 @@ var rate_album = {
 					self.config.submitForm.each(function() {
 						this.reset();
 					});
-					$("#submit_album #submit_response").append(results);
+					response.append(results);
 				}
 			});
 			e.preventDefault();
+			response.fadeOut(3000);
 		});
 
 		// do a POST request to search for an album
