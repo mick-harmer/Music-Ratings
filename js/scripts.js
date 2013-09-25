@@ -43,6 +43,21 @@ var rate_album = {
 
 		// do a POST request to submit an album
 		$("#submit_album input[type='submit']").on('click', function(e) {
+			$.ajax({
+				url: 'submit.php',
+				type: 'POST',
+				data: self.config.submitForm.serialize(),
+				success: function(results) {
+					self.config.submitForm.each(function() {
+						this.reset();
+					});
+					self.config.submitForm.append(data);
+				}
+			});
+			e.preventDefault();
+		});
+
+		/*$("#submit_album input[type='submit']").on('click', function(e) {
 			$.post(
 				"submit.php",
 				self.config.submitForm.serialize(),
@@ -51,11 +66,10 @@ var rate_album = {
 				}
 			);
 			e.preventDefault();
-		});
+		});*/
 
 		// do a POST request to search for an album
 		$("#search_album input[type='submit']").on('click', function(e) {
-
 			self.config.albumList.empty();
 			self.config.albumList.show();
 
@@ -65,6 +79,9 @@ var rate_album = {
 				data: self.config.searchForm.serialize(),
 				dataType: 'json',
 				success: function(results) {
+					self.config.searchForm.each(function() {
+						this.reset();
+					});
 					if (results[0]) {
 						// bind results to albumTemplate, and append the template to the album_list html						
 						self.config.albumList.append(self.config.albumTemplate(results));
@@ -87,7 +104,7 @@ var rate_album = {
 			type: 'POST',
 			data: {browse:10},
 			dataType: 'json',
-			success: function(results) {
+			success: function(results) {				
 				$(".album_list").empty();
 				if (results[0]) {
 					// bind results to albumTemplate, and append the template to the album_list html
