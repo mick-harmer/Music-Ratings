@@ -1,7 +1,7 @@
 Music Ratings
 =============
 
-[Hosted on Heroku](https//music-ratings.heroku.com)
+[Hosted on Heroku](https://music-ratings.heroku.com)
 
 jQuery/Handlebars.js/PHP/PostgreSQL
 
