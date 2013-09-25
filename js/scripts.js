@@ -51,7 +51,7 @@ var rate_album = {
 					self.config.submitForm.each(function() {
 						this.reset();
 					});
-					self.config.submitForm.append(results);
+					$("#submit_album #submit_response").append(results);
 				}
 			});
 			e.preventDefault();

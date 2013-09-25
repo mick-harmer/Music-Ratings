@@ -62,6 +62,7 @@ nav a:hover {
 
 p {
 	font-size: 20px;
+	text-align: center;
 }
 
 /* Submit rating and search artist -- form styling */
