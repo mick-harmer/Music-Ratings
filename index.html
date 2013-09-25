@@ -24,10 +24,10 @@
 </div>
 
 <form id="submit_album" action="submit.php" method="post">
-	<label for="artist">Artist</label><input type="text" name="artist" id="artist" required><br>
-	<label for="album">Album</label><input type="text" name="album" id="album" required><br>
+	<label for="artist">Artist</label><input required type="text" name="artist" id="artist"><br>
+	<label for="album">Album</label><input required type="text" name="album" id="album"><br>
 	<label for="rating">Rating</label>
-	<select name="rating" id="rating" required>
+	<select name="rating" id="rating">
 		<option value="1">*</option>
 		<option value="2">**</option>
 		<option value="3">***</option>
@@ -35,12 +35,10 @@
 		<option value="5">*****</option>
 	</select><br>
 	<label for="submit">blah</label><input type="submit" id="submit" value="Submit">
-	<br><br>
-	<div id="submit_response"></div>
 </form>
 
 <form id="search_album" action="results.php" method="post">
-	<label for="artist_search">Artist</label><input type="text" name="artist_search" id="artist_search" required>
+	<label for="artist_search">Artist</label><input required type="text" name="artist_search" id="artist_search">
 	<input type="submit" value="Search" id="Search">
 </form>
 
@@ -59,7 +57,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="js/handlebars.js"></script>
 <script src="js/scripts.js"></script>
-
 
 </body>
 </html>

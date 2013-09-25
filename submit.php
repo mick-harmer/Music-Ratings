@@ -24,7 +24,7 @@ if (isSet($_POST["artist"], $_POST["album"], $_POST["rating"]))
 	
 	$stmt->execute(array(':artist'=>$artist, ':album'=>$album, ':rating'=>$rating));
 
-	echo "<p>Thanks for rating " . $artist . " - " . $album . "</p>";
+	echo "Thanks for rating " . $artist . " - " . $album;
 	return;
 }
 ?>
