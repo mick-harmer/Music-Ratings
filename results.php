@@ -12,14 +12,17 @@ $pdo = new PDO($dsn);
 // search for a particular artist
 if (isSet($_POST["artist_search"]))
 {
-	echo "BLAH";
-	$stmt = $pdo->prepare('
+	/*$stmt = $pdo->prepare('
 		SELECT artist, album, rating
 		FROM ratings
 		WHERE artist LIKE :search
-		LIMIT 100');
-	$stmt->execute(array(':search' => $_POST["artist"]));
+		LIMIT 100');*/
 	
+	$stmt->execute(array(':search' => $_POST["artist"]));
+	$stmt = $pdo->prepare('
+		SELECT *
+		FROM ratings
+		LIMIT 100');
 	$results = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 	echo json_encode($results);
