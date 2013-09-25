@@ -1,6 +1,13 @@
 <?php
 
-$pdo = new PDO("mysql:host=localhost;dbname=rate_album_db", "root", "qwe1234");
+$dsn = "pgsql:"
+    . "host=ec2-184-73-162-34.compute-1.amazonaws.com;"
+    . "dbname=d7am24ir1dih0m;"
+    . "user=haixijvtehbrpr;"
+    . "port=5432;"
+    . "sslmode=require;"
+    . "password=WYCyCU0S0IsYlhjfS4Dkd4n8ET";
+$pdo = new PDO($dsn);
 
 // search for a particular artist
 if (isSet($_POST["artist"]))
