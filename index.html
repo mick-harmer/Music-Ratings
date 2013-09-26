@@ -42,11 +42,18 @@
 	<input type="submit" value="Search" id="Search">
 </form>
 
+<!-- explanation for future projects:
+The template receives a json object, or array of objects.
+#each this runs through the array.
+{{value}} to substitute the corresponding json field.
+{{starRating this}} calls starRating(object), which gets
+object.rating and transforms it into stars instead.
+-->
 <ul class="album_list">
 	<script id="album_template" type="text/x-handlebars-template">
 		{{#each this}}
 		<li>
-			{{artist}} - {{album}} [{{starRating this}}]
+			{{artist}} - {{album}} {{starRating this}}
 		</li>
 		{{/each}}
 	</script>

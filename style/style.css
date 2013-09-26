@@ -133,6 +133,11 @@ label[for=Search] {
 	text-align: left;
 }
 
+#stars {
+	font-size: 36px;
+	font-color: gold;
+}
+
 #submit_album {
 	display: none;
 }
