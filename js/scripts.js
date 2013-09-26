@@ -9,8 +9,8 @@ var rate_album = {
 	setupTemplates: function() {
 		this.config.albumTemplate = Handlebars.compile(this.config.albumTemplate);
 
-		Handlebars.registerHelper('rating', function(rating) {
-			var ret = "";
+		Handlebars.registerHelper('starRating', function(rating) {
+			var ret = "omg";
 			for (var i=0; i<rating; i++) {
 				ret += "*";
 			}
