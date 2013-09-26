@@ -15,7 +15,7 @@ var rate_album = {
 				ret += "*";
 			}
 			ret += "</div>";
-			return ret;
+			return new Handlebars.SafeString(ret); // do not escape the html in the template
 		});
 	},
 
