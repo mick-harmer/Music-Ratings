@@ -15,7 +15,7 @@ var rate_album = {
 				ret += "*";
 			}
 			console.log(ret);
-			return ret;
+			return rating;
 		});
 	},
 
