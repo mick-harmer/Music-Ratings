@@ -10,11 +10,11 @@ var rate_album = {
 		this.config.albumTemplate = Handlebars.compile(this.config.albumTemplate);
 
 		Handlebars.registerHelper('starRating', function(results) {
-			var ret = "<span id='stars'>";
+			var ret = "<div id='stars'>";
 			for (var i = 0; i < results.rating; i++) {
 				ret += "*";
 			}
-			ret += "</span>";
+			ret += "</div>";
 			return new Handlebars.SafeString(ret); // do not escape the html in the template
 		});
 	},
