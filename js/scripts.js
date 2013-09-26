@@ -8,6 +8,15 @@ var rate_album = {
 
 	setupTemplates: function() {
 		this.config.albumTemplate = Handlebars.compile(this.config.albumTemplate);
+
+		Handlebars.registerHelper('rating', function(rating) {
+			var ret = "";
+			for (var i=0; i<rating; i++) {
+				ret += "*";
+			}
+			console.log(ret);
+			return ret;
+		});
 	},
 
 	bindEvents: function() {
