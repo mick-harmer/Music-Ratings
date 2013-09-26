@@ -16,7 +16,7 @@ if (isSet($_POST["artist_search"]))
 		SELECT artist, album, rating
 		FROM ratings
 		WHERE artist LIKE :search
-		LIMIT 100');	
+		LIMIT 5');	
 	$stmt->execute(array(':search' => $_POST["artist_search"]));
 	
 	$results = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -31,7 +31,7 @@ else if (isSet($_POST["browse"]))
 	$stmt = $pdo->prepare('
 		SELECT *
 		FROM ratings
-		LIMIT 100');
+		LIMIT 5');
 	$stmt->execute();
 	
 	$results = $stmt->fetchAll(PDO::FETCH_OBJ);
