@@ -41,8 +41,7 @@ var rate_album = {
 			}
 			else if (which == "Browse") {
 				self.config.albumList.siblings().hide();
-				self.config.albumList.fadeIn(200);
-				self.handleDisplay();				
+				self.config.albumList.fadeIn(200);				
 			}
 			else if (which == "Search") {
 				self.config.searchForm.siblings().hide();
