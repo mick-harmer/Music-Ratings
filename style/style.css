@@ -57,7 +57,7 @@ nav a:hover {
 .main {
 	border-width: 1px;
 	border-top-style: dotted;
-	border-color: #06799F;;
+	border-color: #06799F;
 	padding-top: 30px;
 	color: #BEBEBE;
 }
@@ -134,14 +134,31 @@ label[for=Search] {
 	list-style: none;
 	font-size: 20px;
 	letter-spacing: -1px;
-	text-align: left;
 	padding-bottom: 5px;
 }
 
-#stars {
+#stars { 
 	font-size: 36px;
 	color: gold;
 }
+
+a#more { /* "View more ratings" */
+	border-width: 1px;
+	border-top-style: solid;
+	border-color: #06799F;
+	padding-top: 8px;
+	text-decoration: none;
+	color: #BEBEBE;
+	font-size: 20px;
+}
+a#more:visited {
+	color: #BEBEBE;
+}
+a#more:hover {
+	color: #FF8973;
+}
+
+/* To enable the "single-page app" style */
 
 #submit_album {
 	display: none;

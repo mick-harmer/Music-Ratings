@@ -42,6 +42,7 @@ var rate_album = {
 			else if (which == "Browse") {
 				self.config.albumList.siblings().hide();
 				self.config.albumList.fadeIn(200);	
+				self.handleDisplay();
 			}
 			else if (which == "Search") {
 				self.config.searchForm.siblings().hide();
@@ -99,17 +100,16 @@ var rate_album = {
 	// do a POST request for all results
 	// then initiate the displaySubset/handleMore process
 	handleDisplay: function(results) {
-		console.log("handleDisplay");
 		var self = rate_album;
 
-		/*var results = {	// test data for serverless testing
+		var results = {	// test data for serverless testing
 			"0" : {"artist":"a","album":"x","rating":5},
 			"1" : {"artist":"b","album":"x","rating":5},
 			"2" : {"artist":"c","album":"x","rating":5},
 			"3" : {"artist":"d","album":"x","rating":5},
 			"4" : {"artist":"e","album":"x","rating":5},
 			"5" : {"artist":"f","album":"x","rating":5},
-		};*/
+		};
 
 		console.log(results);
 
@@ -125,7 +125,6 @@ var rate_album = {
 
 	// display from results[min] to results[max] in an empty albumList div
 	displaySubset: function(results, min, max) {
-		console.log("displaySubset");
 		var self = rate_album;
 		self.config.albumList.empty();
 		self.config.albumList.show();
@@ -143,14 +142,13 @@ var rate_album = {
 
 	// facilitates viewing more results
 	handleMore: function(results, min, max) {
-		console.log("handleMore");
 		var self = rate_album;
 
 		if ($("#more").length > 0) { // remove 'View more ratings' if it exists
 			$("#more").remove();
 		}
 		if (results[max+1]) { // if there are more results, add 'View more ratings'
-			self.config.albumList.append("<a id='more' href='#'>View more ratings</a>");
+			self.config.albumList.append("<br><a id='more' href='#'>View more ratings</a>");
 		}		
 
 		$("a#more").click(function () {
