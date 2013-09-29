@@ -102,7 +102,7 @@ var rate_album = {
 	handleDisplay: function(results) {
 		var self = rate_album;
 
-		var results = {
+		/*var results = {
 			"0" : {
 				"artist":"a","album":"x","rating":5
 			},
@@ -145,7 +145,7 @@ var rate_album = {
 			"13" : {
 				"artist":"n","album":"x","rating":5
 			}
-		};
+		};*/
 
 		if (results[0]) {
 			min = 0, max = 4;
