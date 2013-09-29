@@ -128,6 +128,7 @@ label[for=Search] {
 
 .album_list {
 	text-align: center;
+	padding-right: 50px;
 }
 
 .album_list li {
