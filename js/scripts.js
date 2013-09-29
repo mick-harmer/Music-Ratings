@@ -96,8 +96,7 @@ var rate_album = {
 		});
 	},
 
-	// do a POST request for all results
-	// then initiate the displaySubset/handleMore process
+	// initiate the displaySubset/handleMore process
 	handleDisplay: function(results) {
 		var self = rate_album;
 
