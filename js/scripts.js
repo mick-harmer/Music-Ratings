@@ -3,7 +3,7 @@ var rate_album = {
 		this.config = config;
 
 		this.setupTemplates();
-		this.bindEvents();
+		this.handleEvents();
 	},
 
 	setupTemplates: function() {
@@ -19,7 +19,7 @@ var rate_album = {
 		});
 	},
 
-	bindEvents: function() {
+	handleEvents: function() {
 		var self = rate_album;
 
 		// on h1 click, show intro text and hide siblings
@@ -41,7 +41,7 @@ var rate_album = {
 			}
 			else if (which == "Browse") {
 				self.config.albumList.siblings().hide();
-				self.config.albumList.fadeIn(200);				
+				self.config.albumList.fadeIn(200);	
 			}
 			else if (which == "Search") {
 				self.config.searchForm.siblings().hide();
@@ -99,51 +99,16 @@ var rate_album = {
 	// do a POST request for all results
 	// then initiate the displaySubset/handleMore process
 	handleDisplay: function(results) {
+		console.log("handleDisplay");
 		var self = rate_album;
 
-		/*var results = {
-			"0" : {
-				"artist":"a","album":"x","rating":5
-			},
-			"1" : {
-				"artist":"b","album":"x","rating":5
-			},
-			"2" : {
-				"artist":"c","album":"x","rating":5
-			},
-			"3" : {
-				"artist":"d","album":"x","rating":5
-			},
-			"4" : {
-				"artist":"e","album":"x","rating":5
-			},
-			"5" : {
-				"artist":"f","album":"x","rating":5
-			},
-			"6" : {
-				"artist":"g","album":"x","rating":5
-			},
-			"7" : {
-				"artist":"h","album":"x","rating":5
-			},
-			"8" : {
-				"artist":"i","album":"x","rating":5
-			},
-			"9" : {
-				"artist":"j","album":"x","rating":5
-			},
-			"10" : {
-				"artist":"k","album":"x","rating":5
-			},
-			"11" : {
-				"artist":"l","album":"x","rating":5
-			},
-			"12" : {
-				"artist":"m","album":"x","rating":5
-			},
-			"13" : {
-				"artist":"n","album":"x","rating":5
-			}
+		/*var results = {	// test data for serverless testing
+			"0" : {"artist":"a","album":"x","rating":5},
+			"1" : {"artist":"b","album":"x","rating":5},
+			"2" : {"artist":"c","album":"x","rating":5},
+			"3" : {"artist":"d","album":"x","rating":5},
+			"4" : {"artist":"e","album":"x","rating":5},
+			"5" : {"artist":"f","album":"x","rating":5},
 		};*/
 
 		console.log(results);
@@ -160,6 +125,7 @@ var rate_album = {
 
 	// display from results[min] to results[max] in an empty albumList div
 	displaySubset: function(results, min, max) {
+		console.log("displaySubset");
 		var self = rate_album;
 		self.config.albumList.empty();
 		self.config.albumList.show();
@@ -177,6 +143,7 @@ var rate_album = {
 
 	// facilitates viewing more results
 	handleMore: function(results, min, max) {
+		console.log("handleMore");
 		var self = rate_album;
 
 		if ($("#more").length > 0) { // remove 'View more ratings' if it exists
