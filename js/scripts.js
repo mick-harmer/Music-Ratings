@@ -74,6 +74,7 @@ var rate_album = {
 				data: {browse:5},
 				dataType: 'json',
 				success: function(results) {
+					alert(results);
 					console.log(results);
 					handleDisplay(results);
 				}
