@@ -74,6 +74,7 @@ var rate_album = {
 				data: {browse:5},
 				dataType: 'json',
 				success: function(results) {
+					console.log(results);
 					handleDisplay(results);
 				}
 			});
@@ -146,6 +147,8 @@ var rate_album = {
 				"artist":"n","album":"x","rating":5
 			}
 		};*/
+
+		console.log(results);
 
 		if (results[0]) {
 			min = 0, max = 4;
