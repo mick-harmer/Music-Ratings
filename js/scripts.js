@@ -73,8 +73,7 @@ var rate_album = {
 				data: {browse:5},
 				dataType: 'json',
 				success: function(results) {
-					console.log("what");
-					handleDisplay(results);
+					self.handleDisplay(results);
 				}
 			});
 		});			
@@ -90,7 +89,7 @@ var rate_album = {
 					self.config.searchForm.each(function() {
 						this.reset();
 					});
-					handleDisplay(results);
+					self.handleDisplay(results);
 				}
 			});
 			e.preventDefault();
