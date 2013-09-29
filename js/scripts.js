@@ -42,7 +42,6 @@ var rate_album = {
 			else if (which == "Browse") {
 				self.config.albumList.siblings().hide();
 				self.config.albumList.fadeIn(200);	
-				self.handleDisplay();
 			}
 			else if (which == "Search") {
 				self.config.searchForm.siblings().hide();
@@ -101,17 +100,6 @@ var rate_album = {
 	// then initiate the displaySubset/handleMore process
 	handleDisplay: function(results) {
 		var self = rate_album;
-
-		var results = {	// test data for serverless testing
-			"0" : {"artist":"a","album":"x","rating":5},
-			"1" : {"artist":"b","album":"x","rating":5},
-			"2" : {"artist":"c","album":"x","rating":5},
-			"3" : {"artist":"d","album":"x","rating":5},
-			"4" : {"artist":"e","album":"x","rating":5},
-			"5" : {"artist":"f","album":"x","rating":5},
-		};
-
-		console.log(results);
 
 		if (results[0]) {
 			min = 0, max = 4;
