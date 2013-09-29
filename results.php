@@ -25,7 +25,7 @@ if (isSet($_POST["artist_search"]))
 	return;
 }
 
-// return x results, default 10
+// return x results, default 5
 else if (isSet($_POST["browse"]))
 {
 	$stmt = $pdo->prepare('

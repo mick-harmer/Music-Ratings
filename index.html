@@ -43,11 +43,11 @@
 </form>
 
 <!-- explanation for future projects:
-The template receives a json object, or array of objects.
+The template receives an array of json objects.
 #each this runs through the array.
 {{value}} to substitute the corresponding json field.
 {{starRating this}} calls starRating(object), which gets
-object.rating and transforms it into stars instead.
+object.rating and transforms 5 (eg) into <div="stars">*****</div>
 -->
 <ul class="album_list">
 	<script id="album_template" type="text/x-handlebars-template">
