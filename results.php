@@ -6,7 +6,7 @@ $dsn = "pgsql:"
     . "user=haixijvtehbrpr;"
     . "port=5432;"
     . "sslmode=require;"
-    . "password=WYCyCU0S0IsYlhjfS4Dkd4n8ET";
+    . "password=FILL";
 $pdo = new PDO($dsn);
 
 // search for a particular artist
